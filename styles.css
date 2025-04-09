@@ -43,8 +43,3 @@ button{
     
 }
 
-.box:hover{
-    transform: translateX(100px);
-    transition: 2s;
-}
-
