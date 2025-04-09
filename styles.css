@@ -28,8 +28,9 @@
 }
 
 
+
 h1 {
-    font-size: 200px;
+    font-size: 150px;
 
 }
 button{
@@ -39,5 +40,11 @@ button{
     color: white;
     background-color: rgb(255, 65, 252);
     border-radius: 20px;
+    
+}
+
+.box:hover{
+    transform: translateX(100px);
+    transition: 2s;
 }
 
