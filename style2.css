@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Lemon&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+
+* {
+    background-color: #000;
+    font-family: Monsieur La Doulaise;
+    color: #000;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+
+    body h1{
+        font-size: 50px;
+    
+    }
+    body button{
+        font-size: 20px;
+    
+    }
+
+    video {
+        width: 400px;
+    }
+}
+
+
+h1 {
+    font-size: 200px;
+
+}
+button{
+    font-family: Orbitron;
+    font-size: 50px;
+    padding: 20px;
+    color: white
+    background-color: rgb(255, 65, 252;
+    border-radius: 20px;
+}
+
