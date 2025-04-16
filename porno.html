@@ -16,15 +16,58 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body> 
-    <div>
-    <video controls="controls" autoplay="autoplay" src="vid1.mp4" width="650" muted loop>
-    </video>
-    <video controls="controls" autoplay="autoplay" src="vid2.mp4" width="650" muted loop>
-    </video>
-    <video controls="controls" autoplay="autoplay" src="vid3.mp4" width="650" muted loop>
-    </video>
-    <video controls="controls" autoplay="autoplay" src="vid4.mp4" width="650" muted loop>
-    </video>
+    <div id="wrap">
+        <div id="album">
+            <div id="cover">
+                <div id="print">
+                </div>
+            </div>
+            <div id="vinyl">
+                <div id="print">
+                </div>
+            </div>
+        </div>
     </div>
+<!--     
+    <div>
+    <video id="myVideo" controls="controls" autoplay="autoplay" src="vid1.mp4" width="650" muted loop>
+    </video>
+    <p>Views: <span id="viewCount">0</span></p>
+    <video id="myVideo" controls="controls" autoplay="autoplay" src="vid2.mp4" width="650" muted loop>
+    </video>
+    <p>Views: <span id="viewCount">0</span></p>
+    <video id="myVideo" controls="controls" autoplay="autoplay" src="vid3.mp4" width="650" muted loop>
+    </video>
+    <p>Views: <span id="viewCount">0</span></p>
+    <video id="myVideo" controls="controls" autoplay="autoplay" src="vid4.mp4" width="650" muted loop>
+    </video>
+    <p>Views: <span id="viewCount">0</span></p>
+    </div> -->
 </body>
 </html>
+
+<script>
+    const video = document.getElementById('myVideo');
+    let viewCount = 0;
+    const viewCountSpan = document.getElementById('viewCount');
+
+    video.addEventListener('play', function() {
+    // Increment the view count only if the video hasn't been played before
+    if (video.currentTime === 0) {
+    viewCount++;
+    viewCountSpan.textContent = viewCount;
+    // Store the view count (e.g., using localStorage)
+    localStorage.setItem('videoViews', viewCount);
+    }
+    });
+
+    // Retrieve the stored view count on page load
+    window.addEventListener('load', function() {
+    const storedViews = localStorage.getItem('videoViews');
+    if (storedViews) {
+    viewCount = parseInt(storedViews);
+    viewCountSpan.textContent = viewCount;
+    }
+    });
+
+</script>
